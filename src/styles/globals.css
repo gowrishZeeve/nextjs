@@ -1,3 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("./ReactToastify.css");
+@import url("./inappNotification.css");
+@import url('./custom-responsive.css');
+@import url('./custom.css');
+@import url('./nodeLanding.css');
+@import url('./username.css');
+@import url('./toggle.css');
+@import url('./artifact.css');

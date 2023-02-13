@@ -1,0 +1,121 @@
+@media screen and (max-width: 1380px) {
+  .avatar-image {
+    border: none !important;
+  }
+
+  .job-btns span {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .mg-auto {
+    margin: auto;
+  }
+
+  .job-btns span {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 755px) {
+  .nav-pills {
+    margin-bottom: 0px !important;
+  }
+
+  .marginauto {
+    margin: 0px !important;
+    margin-top: 15px !important;
+  }
+
+  .cloud-details {
+    margin-top: 20px;
+    padding: 20px !important;
+  }
+
+  .toggle-responsive {
+    display: inline-block;
+  }
+
+  .job-btns span {
+    margin-left: 0px;
+  }
+
+  .height-res img {
+    height: 10px;
+  }
+}
+@media screen and (max-width: 996px) {
+  .node-process {
+    margin: auto !important;
+  }
+
+  .network-process {
+    margin: auto !important;
+    margin-top: 5% !important;
+  }
+
+  .job-btns span {
+    margin-left: 0px !important;
+  }
+
+  .imgrotation {
+    transform: rotate(90deg);
+  }
+
+  .marginautoimg {
+    margin-bottom: 15px !important;
+    margin-top: 15px !important;
+  }
+}
+@media screen and (min-width: 1722px) and (max-width: 3000px) {
+  .cube-img img {
+    width: 762px;
+  }
+}
+@media screen and (max-width: 681px) {
+  .login-left {
+    width: 100% !important;
+  }
+
+  .cube-img img {
+    width: auto !important;
+  }
+
+  .width-phonenum {
+    width: 400px !important;
+  }
+
+  .job-btns span {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .pipelinesapi {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media screen and (max-width: 445px) {
+  .mr-auto {
+    margin-left: 0px !important;
+  }
+
+  .pipelinesapi {
+    background-color: rgba(161, 161, 161, 0.05);
+    border-radius: 0px 0px 0px;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+@media (max-width: 576px) {
+  .RPCspace {
+    margin-right: 100px;
+  }
+
+  .RPCspace2 {
+    margin-right: 81px;
+  }
+
+  .RPCspace1 {
+    margin-right: 92px;
+  }
+}

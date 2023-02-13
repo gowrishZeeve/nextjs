@@ -1,0 +1,314 @@
+.artboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artboard.t-material-light {
+  background-color: #fafafa;
+}
+
+.artboard.t-material-dark {
+  background-color: #303030;
+}
+
+@-webkit-keyframes ringing {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20% {
+    transform: rotate(10deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(-6deg);
+  }
+
+  60% {
+    transform: rotate(6deg);
+  }
+}
+
+@keyframes ringing {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20% {
+    transform: rotate(10deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(-6deg);
+  }
+
+  60% {
+    transform: rotate(6deg);
+  }
+}
+
+@-webkit-keyframes clapp {
+  0%,
+  100% {
+    transform: translate(6px, 18px) rotate(0);
+  }
+
+  20% {
+    transform: translate(10px, 18px) rotate(-10deg);
+  }
+
+  40% {
+    transform: translate(2px, 18px) rotate(10deg);
+  }
+
+  60% {
+    transform: translate(9px, 18px) rotate(-8deg);
+  }
+
+  80% {
+    transform: translate(3px, 18px) rotate(8deg);
+  }
+}
+
+@keyframes clapp {
+  0%,
+  100% {
+    transform: translate(6px, 18px) rotate(0);
+  }
+
+  20% {
+    transform: translate(10px, 18px) rotate(-10deg);
+  }
+
+  40% {
+    transform: translate(2px, 18px) rotate(10deg);
+  }
+
+  60% {
+    transform: translate(9px, 18px) rotate(-8deg);
+  }
+
+  80% {
+    transform: translate(3px, 18px) rotate(8deg);
+  }
+}
+
+.notification-bell {
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  cursor: pointer;
+  transform-origin: 50% 0%;
+  position: relative;
+  transition: 200ms ease-in-out color;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.t-material-light .notification-bell {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.t-material-dark .notification-bell {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.notification-bell:after {
+  background-color: red;
+  border: 2px solid;
+  border-radius: 11px;
+  content: attr(data-count);
+  color: #fff;
+  display: block;
+  font-size: 10px;
+  font-family: helvetica;
+  line-height: 8px;
+  min-width: 9px;
+  padding: 4px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 3px;
+  transition: 100ms ease-in-out all;
+}
+
+.t-material-light .notification-bell:after {
+  border-color: #fafafa;
+}
+
+.t-material-dark .notification-bell:after {
+  border-color: #303030;
+}
+
+.notification-bell[data-count="0"]:after {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+.notification-bell.is-muted:after {
+  content: "";
+  color: transparent;
+  height: 2px;
+  min-width: 0;
+  padding: 2px;
+  right: 4px;
+  top: 4px;
+  width: 2px;
+}
+
+.t-material-light .notification-bell:not([data-count="0"]) {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.t-material-dark .notification-bell:not([data-count="0"]) {
+  color: white;
+}
+
+.t-material-light .notification-bell:not([data-count="0"]).is-muted {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.t-material-dark .notification-bell:not([data-count="0"]).is-muted {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.t-material-light .notification-bell:hover {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.t-material-dark .notification-bell:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.notification-bell:hover:after {
+  background-color: #00aa8d;
+}
+
+.notification-bell.is-animating {
+  -webkit-animation: ringing 800ms;
+  animation: ringing 800ms;
+}
+
+.notification-bell.is-animating .notification-bell__clapper {
+  -webkit-animation: clapp 800ms;
+  animation: clapp 800ms;
+}
+
+.notification-bell .notification-bell__bow,
+.notification-bell .notification-bell__clapper {
+  fill: currentColor;
+}
+
+.notification-bell svg {
+  overflow: visible !important;
+}
+
+.notification-bell__clapper {
+  -webkit-animation-timing-function: inherit;
+  animation-timing-function: inherit;
+  transform: translate(6px, 18px) rotate(0);
+  transform-origin: inherit;
+}
+
+.unread {
+  background-color: red;
+}
+
+.unread:hover {
+  background-color: green;
+}
+
+.circle-1,
+.circle-2 {
+  border-radius: 100%;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.circle-1 {
+  transform: translate(91%, -63%);
+}
+
+.circle-2 {
+  transform: translate(11%, -92%);
+  overflow: hidden;
+}
+
+.circle-3 {
+  position: absolute;
+  font-size: 7px;
+  justify-content: center;
+  text-align: center;
+  overflow: auto;
+  width: 14px;
+  height: 14px !important;
+  transform: translate(-129%, -63%);
+}
+
+.circle-3 span {
+  vertical-align: middle;
+}
+
+.notificationcol i {
+  font-size: 18px;
+  padding-top: 21px;
+}
+
+.notificationcol {
+  height: 60px;
+  width: 60px;
+}
+
+.notifibg-info {
+  background-color: #27a7ff29;
+}
+
+.notifibg-warn {
+  background-color: #ffc10761;
+}
+
+.notifibg-error {
+  background-color: #dc35454a;
+}
+
+.notifibg-success {
+  background-color: #1987543b;
+}
+
+.scrolloffcanvas {
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+}
+
+.heading-error {
+  color: #e33345;
+}
+
+.notficationItemAnchor,
+.notficationItemAnchor:hover,
+.notficationItemAnchor:focus,
+.notficationItemAnchor:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.toast-anchor,
+.toast-anchor:hover,
+.toast-anchor:focus,
+.toast-anchor:active {
+  text-decoration: none;
+  color: inherit;
+}

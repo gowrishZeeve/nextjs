@@ -1,8 +1,68 @@
 {
-    "record": {
-      "id": 8221,
-      "uid": "a15c1f1d-9e4e-4dc7-9c45-c04412fc5064",
-      "name": "Next.js",
-      "language": "JavaScript"
+  "protocolBackendApiUrl": "https://app.develop.zeeve.io/ethereum",
+  "authPublicUrl": "http://localhost:5005",
+  "appFrontendUrl": "https://app.develop.zeeve.io",
+  "appBackendApiUrl": "https://app.develop.zeeve.io/app",
+  "InAppNotificationUrl": "ws://localhost:5002",
+  "protocolId": "ethereumid1",
+  "sharedApiEnabled": true,
+  "zeeveManagedCloud": "string",
+  "zdexerPortalUrl": "https://app.develop.zeeve.io/blockchain-data",
+  "endpointUrl": {
+    "wss": "string",
+    "http": "string"
+  },
+  "contacts": {
+    "email": "support@zeeve.io",
+    "helpdeskURL": "https://help.zeeve.io/hc/en-us/signin?return_to=https://help.zeeve.io"
+  },
+  "deploymentId": "bd005ba5-015e-46c4-8336-20fc820ccf9e",
+  "itemCode": {
+    "BYOC_AWS": "NOCODE",
+    "BYOC_AZURE": "NOCODE",
+    "BYOC_DIGITAL_OCEAN": "NOCODE",
+    "BYOC_IBM": "NOCODE",
+    "BYOC_GCP": "NOCODE",
+    "BYOC_TENCENT": "NOCODE",
+    "NODE_FULL": "NOCODE",
+    "ZEEVE_MANAGED": "Zeeve"
+  },
+  "infraTypes": {
+    "Managed-AWS": {
+      "cloudId": "2051b7e0-0210-47e9-870f-76162f49ebf9",
+      "managedHosting": true
+    },
+    "Managed-DIGITAL-OCEAN": {
+      "cloudId": "6cd1b682-bfe7-414c-9e4c-8ab8f8b20ac6",
+      "managedHosting": true
+    },
+    "Managed-GCP": {
+      "cloudId": "gcpid",
+      "managedHosting": true
+    },
+    "BYOC-AWS": {
+      "cloudId": "2051b7e0-0210-47e9-870f-76162f49ebf9",
+      "managedHosting": false
+    },
+    "BYOC-DIGITAL-OCEAN": {
+      "cloudId": "6cd1b682-bfe7-414c-9e4c-8ab8f8b20ac6",
+      "managedHosting": false
+    },
+    "BYOC-GCP": {
+      "cloudId": "gcpid",
+      "managedHosting": false
+    },
+    "BYOC-TENCENT": {
+      "cloudId": "2ca3821c-864e-4a11-8280-6326db48f28c",
+      "managedHosting": false
     }
+  },
+  "clouds": {
+    "2051b7e0-0210-47e9-870f-76162f49ebf9": "AWS",
+    "6cd1b682-bfe7-414c-9e4c-8ab8f8b20ac6": "Digital-Ocean",
+    "8691db48-8595-4eb9-9c2a-7bab535d9475": "Azure",
+    "fa02e4b7-118d-4163-8b15-26f5d18a6820": "IBM",
+    "c4ba9fa8-8fc3-4005-a837-6fa34df26ab7": "GCP",
+    "2ca3821c-864e-4a11-8280-6326db48f28c": "TENCENT"
   }
+}

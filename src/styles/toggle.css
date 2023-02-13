@@ -1,0 +1,26 @@
+.toggle {
+  display: none;
+}
+.toggle i {
+  color: #000;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .toggle {
+    display: inline-block;
+  }
+}
+@media (max-width: 516px) {
+  .container-username {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  .avatar-image {
+    height: 44px !important;
+  }
+}
