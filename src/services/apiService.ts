@@ -74,7 +74,7 @@ export const getInstanceTypesData = async (id: string) => {
 };
 
 export const getAllNodesData = async (id: string | number) => {
-  const res = await getData(Urls.getAllNodes(id));
+  const res = await getData(Urls.getAllNodesUrl(id));
   return res;
 };
 
@@ -94,7 +94,7 @@ export const getRpcDetailData = async (networkId: string, id: string) => {
 };
 
 export const getBlockHeightData = async (networkId: string, id: string) => {
-  const res = await getData(Urls.getNodeInfoUrl(networkId, id));
+  const res = await getData(Urls.getNodeInfo(networkId, id));
   return res;
 };
 
@@ -104,7 +104,7 @@ export const getEndpointDetailsData = async (endpointId: string) => {
 };
 
 export const getSubsComQuotaData = async (subscriptionId: string) => {
-  const res = await getData(Urls.getSubsComQuotaUrl(subscriptionId));
+  const res = await getData(Urls.getConsumptionDetailUrl(subscriptionId));
   return res;
 };
 
@@ -164,10 +164,5 @@ export const getMethodCallData = async (endpointId: string) => {
 
 export const getRecentMethodData = async (endpointId: string) => {
   const res = await getData(Urls.getEndpointRecentMethodCUrl(endpointId));
-  return res;
-};
-
-export const getGCPProjectListData = async (cloudId: string) => {
-  const res = await getData(Urls.getGcpProjectList(cloudId));
   return res;
 };

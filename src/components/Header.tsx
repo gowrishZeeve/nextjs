@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import { redirect } from 'next/navigation'
 
 export interface HeaderProps {
   dashboardUrl: string;
@@ -49,7 +50,8 @@ export const Header = ({
             <Image
               src={zeevelogo}
               onClick={() => {
-                window.open(dashboardUrl, "_self");
+                redirect(dashboardUrl);
+                // window.open(dashboardUrl, "_self");
               }}
               className="img-responsive ms-1 ps-1"
               alt="zeeve-logo"

@@ -10,6 +10,7 @@ import cloudImg from "@/assets/SoundCloud.png";
 import Metrics from "@/components/ViewEndpoint/Metrics";
 import EndpointDetails from "@/components/ViewEndpoint/Details";
 import Image from "next/image";
+import { redirect } from 'next/navigation'
 
 interface props {
   id: string;
@@ -54,7 +55,8 @@ const ViewEndpointBody = ({ id }: props) => {
         setShowConfirmBtn(false);
         if (response.data.success) {
           setTimeout(() => {
-            window.open(Urls.getDashboardUrl(), "_self");
+            // window.open(Urls.getDashboardUrl(), "_self");
+            redirect(Urls.getDashboardUrl())
           }, 3000);
         }
         setLoaderShow(false);

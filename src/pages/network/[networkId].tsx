@@ -1,3 +1,4 @@
+"use client"
 import { useRouter } from "next/router";
 import Navbar from "@/components/NavBar";
 import SideDrawer from "@/components/SideNavBar";

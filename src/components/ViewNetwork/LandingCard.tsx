@@ -25,6 +25,7 @@ import CloudInfo from "@/utils/cloudInfo";
 import CustomLoader from "@/components/CustomLoader";
 import apiBackendInstance from "@/utils/axios";
 import Image from "next/image";
+import { useRouter } from 'next/navigation'
 
 const getCloudImage = (str: string | number) => {
   switch (CloudInfo.getCloudById(str)) {
@@ -84,6 +85,9 @@ const LandingCard = ({
   const [analyticsUrls, setAnalyticsUrls] = useState<
     { dashboardName: string; dashboardURL: string }[]
   >([]);
+
+  const router = useRouter()
+
 
   const loadRegions = () => {
     apiBackendInstance
@@ -602,7 +606,8 @@ const LandingCard = ({
           setDeleteMsg(response.data.data.data);
           if (response.data.data.success) {
             setTimeout(() => {
-              window.location.reload();
+              // window.location.reload();
+              router.refresh()
             }, 10000);
           }
         }

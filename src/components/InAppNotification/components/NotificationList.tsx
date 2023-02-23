@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AppData } from "@/components/InAppNotification/declarations/message";
-import InAppNotificationsManager from "@/components/InAppNotification/components/Icons/NotificationBellIcon";
+import InAppNotificationsManager from "@/components/InAppNotification/InAppNotificationManager";
 import NotificationItem from "@/components/InAppNotification/components/NotificationItem";
 
 const NotificationList = () => {
@@ -24,8 +24,9 @@ const NotificationList = () => {
   });
   return (
     <ul className="px-0">
-      {messages.map((val) => (
+      {messages.map((val,index) => (
         <NotificationItem
+          key={index}
           heading={val.heading}
           description={val.description}
           level={val.level}

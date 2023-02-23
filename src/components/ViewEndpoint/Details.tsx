@@ -5,6 +5,7 @@ import Urls from "@/utils/baseURLs";
 import { highlight, removeHighlight } from "@/utils/helpers";
 import apiBackendInstance from "@/utils/axios";
 import ErrorMessages from "@/utils/errorMessage";
+import { useRouter} from 'next/navigation'
 
 type codeSnippetType = "CURL" | "WSCAT" | "NodeJs" | "Python" | "Go" | "none";
 
@@ -67,6 +68,8 @@ const EndpointDetails = ({ id, setEndpointName }: props) => {
   const [codes, setCodes] = useState<
     { lang: codeSnippetType; http?: string; wss?: string }[]
   >([]);
+
+  const router = useRouter()
 
   const httpRef = useRef<HTMLDivElement>(null);
   const wssRef = useRef<HTMLDivElement>(null);
@@ -1142,7 +1145,8 @@ case <-interrupt:
           setMessage("");
         }}
         onConfirm={() => {
-          window.location.reload();
+          router.refresh()
+          // window.location.reload();
         }}
         show={modalShow}
         disableConfirmBtn={false}

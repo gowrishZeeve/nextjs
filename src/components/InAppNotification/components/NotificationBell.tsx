@@ -1,15 +1,17 @@
+"use client"
 import { useEffect, useState } from "react";
 import { prefixPath } from "@/utils/helpers";
 import { CountData } from "@/components/InAppNotification/declarations/message";
 import NotificationBellIcon from "@/components/InAppNotification/components/Icons/NotificationBellIcon";
 import InAppNotificationsManager from "@/components/InAppNotification/InAppNotificationManager";
+import { usePathname } from 'next/navigation'
 
 interface props {
   theme: string;
 }
 const NotificationBell = ({ theme }: props) => {
-  const notificationUrl =
-    window.location.origin + prefixPath(`/img/${theme}/notification.svg`);
+  // const notificationUrl =
+  //   window.location.origin + prefixPath(`/img/${theme}/notification.svg`);
   const [notificationCount, setNotificationCount] = useState<Number>(0);
   const [isAnimating, setIsAnimating] = useState<string>("");
   useEffect(() => {

@@ -1,3 +1,4 @@
+"use client"
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-quotes */
@@ -20,6 +21,7 @@ import RpcComponent from "@/components/ViewNetwork/RPCComponent";
 import CustomLoader from "@/components/CustomLoader";
 import apiBackendInstance from "@/utils/axios";
 import Image from "next/image";
+import { useRouter,redirect } from 'next/navigation'
 
 type CodeSnippetType = "CURL" | "WSCAT" | "NodeJs" | "Python" | "Go" | "none";
 
@@ -76,6 +78,8 @@ const ViewNetworkBody = ({ id }: { id: string | number }) => {
   const [codes, setCodes] = useState<
     { lang: CodeSnippetType; http?: string; wss?: string; beacon?: string }[]
   >([]);
+
+  const router = useRouter()
 
   function myFunction() {
     document.getElementById("myDropdown")?.classList.toggle("show");
@@ -164,7 +168,8 @@ const ViewNetworkBody = ({ id }: { id: string | number }) => {
           }
           setShowLoader(false);
           setTimeout(() => {
-            window.open(Urls.getAllNetworkUrl(), "_self");
+            // window.open(Urls.getAllNetworkUrl(), "_self");
+            redirect(Urls.getAllNetworkUrl())
           }, 3000);
         }
         setInActive(false);
@@ -346,7 +351,8 @@ const ViewNetworkBody = ({ id }: { id: string | number }) => {
                 <div id="myDropdown" className="dropdown-content">
                   <li
                     onClick={() => {
-                      window.open(prefixPath(`/addnode/${id}`), "_self");
+                      // window.open(prefixPath(`/addnode/${id}`), "_self");
+                      redirect(prefixPath(`/addnode/${id}`))
                     }}
                   >
                     Add Node

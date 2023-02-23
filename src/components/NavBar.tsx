@@ -101,7 +101,7 @@ const Navbar = () => {
       <div className="avatar col-xl-3 col-lg-6 col-md-6 col-sm-5 col-6">
         <div className="d-flex justify-content-end">
           <div className="col-lg-12 col-xl-12 mt-2 text-center">
-            {/* <NotificationBell theme="zeeve" /> */}
+            <NotificationBell theme="zeeve" />
           </div>
           {/* notifications starts heere */}
           <div
@@ -121,7 +121,7 @@ const Navbar = () => {
                 />
               </div>
             </div>
-            {/* <div className="mt-3"><NotificationList /></div> */}
+            <div className="mt-3"><NotificationList /></div>
           </div>
         </div>
       </div>
