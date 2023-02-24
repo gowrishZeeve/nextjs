@@ -1,9 +1,9 @@
 export const prefixPath = (src: string): string => {
   if (
-    process.env.NEXT_PUBLIC_SUB_PATH !== "" &&
-    process.env.NEXT_PUBLIC_SUB_PATH !== undefined
+    process.env.NEXT_PUBLIC_APP_URL !== "" &&
+    process.env.NEXT_PUBLIC_APP_URL !== undefined
   ) {
-    return process.env.NEXT_PUBLIC_SUB_PATH + src;
+    return process.env.NEXT_PUBLIC_APP_URL + src;
   }
   return src;
 };

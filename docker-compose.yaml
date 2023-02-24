@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  ethereum-nextjs-app:
+    restart: on-failure
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_APP_URL: "/ethereum-nextjs"
+        GITLAB_ACCESS_TOKEN: "ZeeveGitLab1pmqt9dDa2zuWeayEMRX"
+    ports:
+      - '3000:3000'
+    networks:
+      - app-network
+  ethereum-nextjs-nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+    networks:
+      - app-network
+    depends_on:
+      - ethereum-nextjs-app
+networks:
+  app-network:
+    driver: bridge

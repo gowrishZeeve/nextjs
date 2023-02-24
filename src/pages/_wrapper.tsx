@@ -13,8 +13,9 @@ export interface WrapperProps extends React.PropsWithChildren {}
 const Wrapper: React.FC<WrapperProps> = ({ children }) => {
   useEffect(() => {
     axios
-      .get(prefixPath("/") + globalConfigUrl)
+      .get(prefixPath("/api/config"))
       .then((response) => {
+        console.log("config", response.data)
         globalConfig.config = response.data;
       })
       .then(() => {

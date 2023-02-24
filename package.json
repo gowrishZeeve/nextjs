@@ -1,13 +1,12 @@
 {
-    "name": "feb_7",
+    "name": "ethereum-nextjs",
     "version": "0.1.0",
-    "private": true,
+    "homepage": "",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint",
-        "docker": "sudo docker build -t feb_7 . && sudo docker run --rm -it -p 3000:3000 --name next_app feb_7"
+        "lint": "next lint"
     },
     "dependencies": {
         "@next/font": "13.1.6",
