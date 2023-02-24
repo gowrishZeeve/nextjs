@@ -5,9 +5,6 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-      args:
-        NEXT_PUBLIC_APP_URL: "/ethereum-nextjs"
-        GITLAB_ACCESS_TOKEN: "ZeeveGitLab1pmqt9dDa2zuWeayEMRX"
     ports:
       - '3000:3000'
     networks:
